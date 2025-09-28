@@ -1,3 +1,5 @@
+// Simple terminal client to connect to the server
+
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <sys/socket.h>

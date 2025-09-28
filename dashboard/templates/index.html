@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Server Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <h1>Chat Server Dashboard</h1>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Server Status</h3>
+                <div id="server-status" class="status-offline">Offline</div>
+            </div>
+            <div class="stat-card">
+                <h3>Active Clients</h3>
+                <div id="active-clients">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Total Rooms</h3>
+                <div id="total-rooms">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Messages/Min</h3>
+                <div id="messages-per-minute">0</div>
+            </div>
+        </div>
+
+        <div class="sections">
+            <div class="section">
+                <h3>Connected Clients</h3>
+                <ul id="client-list">
+                    <li>No clients connected</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Active Rooms</h3>
+                <ul id="room-list">
+                    <li>No active rooms</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="uptime">
+            <strong>Uptime:</strong> <span id="uptime">0:00:00</span>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

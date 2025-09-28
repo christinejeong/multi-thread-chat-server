@@ -1,3 +1,5 @@
+// Chat rooms, broadcast, add/remove clients
+
 #ifndef ROOM_H
 #define ROOM_H
 

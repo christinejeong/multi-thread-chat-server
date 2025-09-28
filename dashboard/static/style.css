@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #FFF;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #FFF;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+}
+
+h1 {
+    background-color: #7c5cbc;
+    color: #FFF;
+    padding: 24px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 24px;
+    background-color: #FFF;
+}
+
+.stat-card {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+    border-color: #7c5cbc;
+    transform: translateY(-2px);
+}
+
+.stat-card h3 {
+    color: #666;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.stat-card div {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #333;
+}
+
+.status-online {
+    color: #7c5cbc !important;
+}
+
+.status-offline {
+    color: #999 !important;
+}
+
+.status-error {
+    color: #ff6b6b !important;
+}
+
+.sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 24px;
+    background-color: #fafafa;
+}
+
+.section {
+    background: #FFF;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.section h3 {
+    color: #333;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #7c5cbc;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.section ul {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.section li {
+    background: #dfc9ee;
+    margin: 6px 0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border-left: 3px solid #7c5cbc;
+    transition: all 0.2s ease;
+}
+
+.section li:hover {
+    background: #7c5cbc;
+    color: #FFF;
+    transform: translateX(4px);
+}
+
+.uptime {
+    background-color: #7c5cbc;
+    color: #FFF;
+    padding: 16px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+/* Scrollbar styling */
+.section ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.section ul::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.section ul::-webkit-scrollbar-thumb {
+    background: #7c5cbc;
+    border-radius: 3px;
+}
+
+.section ul::-webkit-scrollbar-thumb:hover {
+    background: #6a4ba8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .sections {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+    
+    body {
+        padding: 12px;
+    }
+}
+
+/* Loading animation */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.pulse-update {
+    animation: pulse 0.5s ease-in-out;
+}
+
+/* Empty state styling */
+.section li:first-child:last-child {
+    font-style: italic;
+    color: #666;
+    background: #f8f8f8;
+    border-left: 3px solid #ddd;
+}

@@ -1,3 +1,5 @@
+// Runs the main server loop, accepts connections
+
 #include <arpa/inet.h>
 #include <netinet/in.h>
 #include <signal.h>
