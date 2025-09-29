@@ -1,4 +1,4 @@
-# Welcome to the Multi-threaded Chat Server!
+# Multi-threaded Chat Server
 A high-performance, multi-threaded chat application built with C++ for the backend server and Python/Flask for the real-time monitoring dashboard. This project demonstrates modern systems programming, concurrent network applications, and full-stack development.
 
 ## Features
