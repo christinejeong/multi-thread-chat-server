@@ -50,17 +50,3 @@ A high-performance, multi-threaded chat application built with C++ for the backe
 2. **Start all services**
    ```bash
    ./scripts/start_all.sh
-
-4. **Manual setup**
-   # Build and run C++ server
-  cd server && make && ./chat_server 8080
-
-  # In another terminal - Start Python dashboard
-  cd dashboard
-  python3 -m venv venv
-  source venv/bin/activate
-  pip install -r requirements.txt
-  python app.py --port 5001
-  
-  # In another terminal - Connect chat client
-  cd client && make && ./chat_client 127.0.0.1 8080
