@@ -48,8 +48,7 @@ A high-performance, multi-threaded chat application built with C++ for the backe
    cd multi-thread-chat-server
 
 2. **Start all services**
-   ```bash
-  ./scripts/start_all.sh
+   ```bash ./scripts/start_all.sh
 
 3. **Manual setup**
    # Build and run C++ server
